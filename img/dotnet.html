@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Dr. Milan Milanović">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="A Brief Walk Through .Net Ecosystem in 2020. and look to the future">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://milan.milanovic.org/post/a-brief-walk-through-net-ecosystem/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#174a80">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.deb3849865035ba4a56ab70c354157db.css">
+
+  
+    
+    
+    
+    
+      
+    
+    
+    
+    <link rel="stylesheet" href="/css/academic.fbcd51790363d275c30a6040aca27c77.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-12272975-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://milan.milanovic.org/post/a-brief-walk-through-net-ecosystem/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@milan_milanovic">
+  <meta property="twitter:creator" content="@milan_milanovic">
+  
+  <meta property="og:site_name" content="Milan Milanović | Cloud | Belgrade">
+  <meta property="og:url" content="https://milan.milanovic.org/post/a-brief-walk-through-net-ecosystem/">
+  <meta property="og:title" content="A Brief Walk Through .Net Ecosystem | Milan Milanović | Cloud | Belgrade">
+  <meta property="og:description" content="A Brief Walk Through .Net Ecosystem in 2020. and look to the future"><meta property="og:image" content="https://milan.milanovic.org/post/a-brief-walk-through-net-ecosystem/featured.jpg">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2020-06-20T21:42:41&#43;02:00">
+  
+  <meta property="article:modified_time" content="2020-12-27T21:42:41&#43;02:00">
+  
+
+  
+
+  <meta name="theme-color" content="#174a80">
+
+  <title>A Brief Walk Through .Net Ecosystem | Milan Milanović | Cloud | Belgrade</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Milan Milanović | Cloud | Belgrade</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#degrees">
+            
+            <span>Degrees</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#experience">
+            
+            <span>Experience</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#research">
+            
+            <span>Research</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#skills">
+            
+            <span>Skills</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-header d-xl-none">
+  <div class="featured-image" style="background-image: url('/post/a-brief-walk-through-net-ecosystem/featured_hube04e23e9dba7bfaf70697e152c6ac57_19897_800x0_resize_q90_lanczos.jpg');"></div>
+  <span class="article-header-caption">.NET</span>
+</div>
+
+
+<div class="container-fluid split-header d-none d-xl-block">
+  <div class="row">
+    <div class="col-6">
+      <div class="split-header-content">
+        <h1 itemprop="name">A Brief Walk Through .Net Ecosystem</h1>
+
+        
+        <p class="page-subtitle">Including .NET 5</p>
+        
+
+        
+
+
+
+<meta content="2020-06-20 21:42:41 &#43;0200 CEST" itemprop="datePublished">
+<meta content="2020-12-27 21:42:41 &#43;0200 &#43;0200" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/admin/">Dr. Milan Milanović</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>Dec 27, 2020</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    20 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+
+  
+
+</div>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=A%20Brief%20Walk%20Through%20.Net%20Ecosystem&amp;url=https%3a%2f%2fmilan.milanovic.org%2fpost%2fa-brief-walk-through-net-ecosystem%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmilan.milanovic.org%2fpost%2fa-brief-walk-through-net-ecosystem%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmilan.milanovic.org%2fpost%2fa-brief-walk-through-net-ecosystem%2f&amp;title=A%20Brief%20Walk%20Through%20.Net%20Ecosystem"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmilan.milanovic.org%2fpost%2fa-brief-walk-through-net-ecosystem%2f&amp;title=A%20Brief%20Walk%20Through%20.Net%20Ecosystem"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=A%20Brief%20Walk%20Through%20.Net%20Ecosystem&amp;body=https%3a%2f%2fmilan.milanovic.org%2fpost%2fa-brief-walk-through-net-ecosystem%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="split-header-image">
+        <img src="/post/a-brief-walk-through-net-ecosystem/featured_hube04e23e9dba7bfaf70697e152c6ac57_19897_680x500_fill_q90_lanczos_smart1.jpg" itemprop="image" alt="">
+        <span class="article-header-caption">.NET</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-container d-xl-none">
+  <h1 itemprop="name">A Brief Walk Through .Net Ecosystem</h1>
+
+  
+  <p class="page-subtitle">Including .NET 5</p>
+  
+
+  
+
+
+
+<meta content="2020-06-20 21:42:41 &#43;0200 CEST" itemprop="datePublished">
+<meta content="2020-12-27 21:42:41 &#43;0200 &#43;0200" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/admin/">Dr. Milan Milanović</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>Dec 27, 2020</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    20 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=&amp;url="
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u="
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=&amp;body=">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>If you are working as a developer and want to switch to the .NET world, you will need to know what are possibilities for you inside. As .NET Framework is the most popular technology from .NET Ecosystem you can use it to build different kinds of applications, but these days, there are some new things, like .NET Core and .NET Standard library. Is this something we can use in a project or build?</p>
+
+<p>There is some confusion when trying to use specific tech stack in the .NET ecosystem, as there are so many options, such as which type of runtime should you use? In this text we will try to make all of these points clear.</p>
+
+<p>In general, .NET is an open source developer platform, created by Microsoft, for building many different types of applications, such as: web, mobile, desktop, games, etc. It consists of different tools, programming languages and libraries. Lets start with a brief history of the .NET.</p>
+
+<h1 id="the-history-behind-net">The history behind .NET</h1>
+
+<p>During 1990s, Microsoft started to work on something called .NET Strategy. The key point of this strategy was to encompass all Microsoft products and add .NET to existing product names. In the 2000s, .NET framework was known as the Next Generation Windows Services (NGWS). First beta versions of .NET framework were released in the late 2000s and the first version .NET 1.0 was released on February 13, 2002. Since then many versions were released with new features. Some of the most important were:</p>
+
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>C#</th>
+<th>.NET</th>
+<th>CLR</th>
+<th>Included in vs</th>
+<th>Language features</th>
+<th>Roslyn compiler</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>2002</td>
+<td>1.0</td>
+<td>.NET Framework 1.0</td>
+<td>1.0</td>
+<td>2002</td>
+<td>Classes, Structs, Interfaces, Events, Properties, Delegates, Operators, Expressions, Statements, Attributes</td>
+<td>Legacy</td>
+</tr>
+
+<tr>
+<td>2003</td>
+<td>1.1</td>
+<td>.NET Framework 1.1</td>
+<td>1.1</td>
+<td>2003</td>
+<td>-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2003</td>
+<td>1.2</td>
+<td>.NET Framework 1.1</td>
+<td>1.1</td>
+<td>2003</td>
+<td>-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2005</td>
+<td>2.0</td>
+<td>.NET Framework 2.0</td>
+<td>2.0</td>
+<td>2005</td>
+<td>Generics, Partial types, Nullable value types, Anonymous methods, Iterators, Covariance and Contravariance, Static classes, Delegate inference, Method group conversions, Getter/setter separate accessibility</td>
+<td>Legacy</td>
+</tr>
+
+<tr>
+<td>2006</td>
+<td>2.0</td>
+<td>.NET Framework 3.0</td>
+<td>2.0</td>
+<td>2008</td>
+<td>-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2007</td>
+<td>3.0</td>
+<td>.NET Framework 3.5</td>
+<td>2.0</td>
+<td>2008</td>
+<td>Implicit typed local variables, Extension methods, Auto implemented properties, Anonymous types, Lambda expressions, Query expressions, Expression tree, Partial methods</td>
+<td>Legacy</td>
+</tr>
+
+<tr>
+<td>2010</td>
+<td>4.0</td>
+<td>.NET Framework 4.0</td>
+<td>4.0</td>
+<td>2010</td>
+<td>Dynamic binding, Named and optional arguments, Generic Covariant and Contravariant, Type equivalence</td>
+<td>Legacy</td>
+</tr>
+
+<tr>
+<td>2012</td>
+<td>5.0</td>
+<td>.NET Framework 4.5</td>
+<td>4.0</td>
+<td>2012</td>
+<td>Asynchronous methods, Caller information attributes</td>
+<td>Legacy</td>
+</tr>
+
+<tr>
+<td>2013</td>
+<td>5.0</td>
+<td>.NET Framework 4.5.1</td>
+<td>4.0</td>
+<td>2012</td>
+<td>-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2014</td>
+<td>5.0</td>
+<td>.NET Framework 4.5.2</td>
+<td>4.0</td>
+<td>2012</td>
+<td>-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2015</td>
+<td>6.0</td>
+<td>.NET Framework 4.6</td>
+<td>4.0</td>
+<td>2015</td>
+<td>Static imports, Exception filters, Auto-property initializers, Expression body definition, Null propagating, String interpolation, nameof, Dictionary initializer</td>
+<td>Open source</td>
+</tr>
+
+<tr>
+<td>2015</td>
+<td>6.0</td>
+<td>.NET Framework 4.6.1</td>
+<td>4.0</td>
+<td>2015</td>
+<td>-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2016</td>
+<td>6.0</td>
+<td>.NET Framework 4.6.2</td>
+<td>4.0</td>
+<td>2015</td>
+<td>-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2016</td>
+<td>6.0</td>
+<td>.NET Core 1.0</td>
+<td>CoreCLR</td>
+<td>2015</td>
+<td>-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2016</td>
+<td>6.0</td>
+<td>.Net Core 1.1</td>
+<td>CoreCLR</td>
+<td>2015</td>
+<td>-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2017</td>
+<td>7.0</td>
+<td>.NET Framework 4.7</td>
+<td>4.0</td>
+<td>2017 (v15.0)</td>
+<td>Out variables, Tuples and deconstruction, Pattern matching, Local functions, Expanded expression bodied members, Ref locals and returns, Discards, Binary literals, Digit separators, Throw expressions</td>
+<td>Open source</td>
+</tr>
+
+<tr>
+<td>2017</td>
+<td>7.1</td>
+<td>.NET Core 2.0</td>
+<td>CoreCLR</td>
+<td>2017 (15.3)</td>
+<td>Async Main method, Default literal expressions, Inferred tuple element names, Pattern matching on generic type parameters</td>
+<td>Open source</td>
+</tr>
+
+<tr>
+<td>2017</td>
+<td>7.2</td>
+<td>.NET Framework 4.7.1</td>
+<td>4.0</td>
+<td>2017 (15.5)</td>
+<td>Non-trailing named arguments, Underscore prefix in numeric literals, Private protected access modifier, Conditional ref, Efficient safe code syntax improvements</td>
+<td>Open source</td>
+</tr>
+
+<tr>
+<td>2018</td>
+<td>7.3</td>
+<td>.NET Framework 4.7.2</td>
+<td>4.0</td>
+<td>2017 (v15.7)</td>
+<td>Small improvements to existing features</td>
+<td>Open source</td>
+</tr>
+
+<tr>
+<td>2018</td>
+<td>7.3</td>
+<td>.NET Core 2.1</td>
+<td>CoreCLR</td>
+<td>2017 (v15.7)</td>
+<td>-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2018</td>
+<td>7.3</td>
+<td>.NET Core 2.2</td>
+<td>CoreCLR</td>
+<td>2017 (v15.7)</td>
+<td>-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2019</td>
+<td>7.3</td>
+<td>.NET Framework 4.8</td>
+<td>4.0</td>
+<td>2017 (v15.7)</td>
+<td>-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2019</td>
+<td>8.0</td>
+<td>.NET Core 3.0</td>
+<td>CoreCLR</td>
+<td>2019 (v16.3)</td>
+<td>Readonly members, Default interface methods, New pattern matchings, Using declarations, Static local functions, Disposable ref structs, Nullable reference types, Asynchronous streams, Indices and ranges, Null-coalescing assignment, Unmanaged constructed types, Stackalloc in nested expressions, @$ order</td>
+<td>Open source</td>
+</tr>
+
+<tr>
+<td>2019</td>
+<td>8.0</td>
+<td>.NET Core 3.1</td>
+<td>CoreCLR</td>
+<td>2019 (v16.3)</td>
+<td>-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2020</td>
+<td>9.0</td>
+<td>.NET 5.0</td>
+<td>CoreCLR</td>
+<td>2019 (v16.8)</td>
+<td>Records, with expressions, Init only setters, Top-level statements, New pattern matchings, Performance and interop improvements, Fit and finish features, Support for code generators, Target-type new expressions, static anonymous functions, Target-type conditional expressions</td>
+<td>Open source</td>
+</tr>
+</tbody>
+</table>
+
+<p>The image below shows timeline of .NET main events:</p>
+
+<p><iframe width="100%" height="400" src="https://time.graphics/embed?v=1&id=399101" frameborder="0" allowfullscreen></iframe>
+<div><a  style="font-size: 12px; text-decoration: none;" title=".NET timeline" href="https://time.graphics">.NET timeline</a></div></p>
+
+<h1 id="net-ecosystem-an-overview">.NET Ecosystem: An overview</h1>
+
+<p>Currently, in 2020. .NET Ecosystem consists of different components in the development platform. It encompasses different runtimes, such as:</p>
+
+<ul>
+<li>.<strong>NET Framework</strong> (WPF, Windows Forms, ASP.NET) - Windows centric.</li>
+<li><strong>.NET Core</strong> (ASP.NET Core, Universal Windows Platform - UWP) - Cross-platform, works side-by-side with other versions.</li>
+<li><strong>.NET 5</strong> (ASP.NET Core, WPF, Windows Forms, Blazor) - A unifying platform for desktop, Web, cloud, mobile, gaming, IoT, and AI applications.</li>
+<li><strong>Mono for Xamarin</strong> (IOS, OS X, Android) - Cross-platform.</li>
+</ul>
+
+<p>All of the above runtimes implement .NET Standard Library, which is a specification of .NET APIs that have implementations for each runtime. So that code that is created for one runtime, can be executed with other runtime.</p>
+
+<p>All the runtimes uses tools and infrastructure to compile and run code. This includes languages (C#, Visual Basic), compilers (<a href="https://github.com/dotnet/roslyn/wiki/Roslyn%20Overview" target="_blank">Roslyn</a>), garbage collection, as well as build tools like MS Build, or (Core) CLR.</p>
+
+
+
+
+<figure>
+
+<img src="netecosystem.jpeg" />
+
+
+</figure>
+
+<h1 id="net-runtimes">.NET runtimes</h1>
+
+<p>In this section we will look at main .NET runtimes. We consider .NET runtime as anything that implements <a href="https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md" target="_blank">ECMA-335 Standard for .NET</a>.</p>
+
+<p>.NET Framework and .NET Core can be downloaded from the official <a href="https://dotnet.microsoft.com/download" target="_blank">Microsoft site</a>. LTS (Long-term support) versions have extended support period and should be used.</p>
+
+<h2 id="net-framework">.NET Framework</h2>
+
+<p>.NET Framework is a software development framework for building and running applications on Windows. It is party open-sourced at <a href="https://github.com/microsoft/referencesource" target="_blank">here</a>. .NET Framework consists of Common Language Runtime (CLR), .NET Framework Class library and Application workloads (WPF, Windows Forms and ASP.NET). CLR is part of common infrastructure than run code, jit, do garbage collection (C#, VB.NET, F#), etc. Code that is managed by CLR is called managed code. Code is compiled into Common Intermediate Language (CIL) and stored in assemblies (with .exe or .dll extension). When application runs, CLR takes assembly and uses just-in-time compiler (JIT) to transpile machine code into code that can run on specific computer architecture.</p>
+
+
+
+
+<figure>
+
+<img src="netarch.jpg" />
+
+
+</figure>
+
+<p>.NET framework library contains classes, interfaces and values types that provides capatibilites, such as string, file system support, etc. It allows creating different type of applications, such as: console applications or Windows Forms, Windows Communication Foundation (WCF), Windows Workflow Foundation (WF), Windows Presentation Foundation (WPF), ASP.NET (Forms, Web API), Azure (WebJobs, Cloud Services). Most of those are specific to Windows platforms and use Windows API, so they work only on Windows platform.</p>
+
+<p>If you want to run applications that are built by using .NET Framework you need to install it first, although Windows already comes with some versions installed. Each version have CLR and library. It is possible to install multiple versions, side by side (only major versions). Minor versions will override existing versions, as they don&rsquo;t contain braking changes. For example for .NET 4.2.3: major version is 4 (new CLR), 2 minor version means (new library, which introduces new features) and 3 revision (bug fixes).</p>
+
+<p>.NET Framework is installed usually at C:\Windows\Microsoft.NET\Framework (or Framework64). Inside, you will find folders with all major versions installed.</p>
+
+<h2 id="net-core">.NET Core</h2>
+
+<p>.NET Core is one of runtimes in .NET Ecosystem. It is released in 2016. and its open-sourced (<a href="https://github.com/dotnet/core" target="_blank">https://github.com/dotnet/core</a>). It does not represent a new version of .NET Framework and will not replace it. Its completely independent version, which is build to allow cross-platform capatibility to application development. .NET Core consists of App Host (dotnet.exe) that run CLR and Library. It has Common language runtime (CoreCLR) and .NET Core Class Library.</p>
+
+<p>CoreCLR uses JIT Compilation and garbage collection to run code. It supports C#, VB.NET and F#. .NET Core has .NET Core Class Library, which includes classes that provides different capatibilities and its a smaller subset of .NET Framework library. It supports different types of application workloads, such as ASP.NET Core (MVC and API), console applications and UWP (currently). UWP provides a common type system, APIs, and application model for all devices running on Windows 10. From the .NET Core 3.0 SDK it includes support for Windows Forms applications, including Windows Forms Designer.</p>
+
+<p>.NET Core can run on different platforms: Windows Client, Server, IoT, Linux, Ubnutu, FreeBSD, Tizen, Mac OSX and can be installed side-by-side of different versions, per machine or user.</p>
+
+<p>.NET Core is installed in C:\Program Files\dotnet\shared\ Microsoft.NETCore.App[versions], which live side by side.</p>
+
+<p>In addition, its possible to create self-contained version, which don&rsquo;t need installed .NET core on the host machine, as it packs app host in the resulting .exe file. The disadvantage is that the the deployment will be larger. It is run via:</p>
+
+<pre><code class="language-shell">dotnet publish -r linux-x64 --self-contained
+</code></pre>
+
+
+
+
+<figure>
+
+<img src="netcore.png" />
+
+
+</figure>
+
+<h2 id="net-5">.NET 5</h2>
+
+<p>.NET 5 is the latest runtime in .NET Ecosystem. It is released in November 2020. with a goal to unifying development for desktop, Web, cloud, mobile, gaming, IoT, and AI applications. The earlier setup goal was  to produce a single .NET runtime and framework, cross-platform, integrating the best features of .NET Core, .NET Framework, Xamarin, and Mono. However, due to the global health pandemic, the unification was postponed to .NET 6 (expected to be released in November 2021). .NET 5 consists of App Host (dotnet.exe) that run CLR and Library. It has Common language runtime (CoreCLR) and .NET 5 Class Library.</p>
+
+<p>.NET 5.0 has a nearly identical platform support as .NET Core 3.1, for Windows, macOS, and Linux.</p>
+
+<p>.NET 5 is installed in C:\Program Files\dotnet\shared\ Microsoft.NETCore.App[versions], which live side by side.</p>
+
+<p>.NET 5 is a shared code base for .NET Core, Mono, Xamarin, and future .NET implementations. Also, target framework names (TFMs), which are used to express which version of .NET targeting, are updated, so we have now <strong>net5.0</strong>. This is for code that runs everywhere. It combines and replaces the netcoreapp and netstandard names and <strong>net5.0-windows</strong> that represent OS specific flavors of .NET 5 that include net5.0 plus OS-specific bindings.</p>
+
+<p>.NET 5 improve significantly single-file applications. Single-file applications are published and deployed as a single file, which includes the app and all of its dependencies. They can also be self-contained, which means they carry their own .NET runtime. Even thoguh single fileapplications were already a think in .Net Core, their behavior is completely different. In .Net Core 3.1, in fact, it packages binaries into a single file for deployment and then unpacks those files to a temporary directory to load and execute them. With .Net 5 instead when the app is run dependencies are loaded directly from that file into memory. .NET 5 also brings smaller single-file applications with more efficient memory usage and can be used in microservices containerized applications.</p>
+
+<p>In addition, one of the important new features is support for <strong>ARM64</strong>, that will allow .NET 5 applications to run natively on Windows and ARM hardware (such as new Apple M1 ARM-based processors). This means that is has the widest OS support of any .Net version before.</p>
+
+<p>In fact it runs on:</p>
+
+<ul>
+<li>Windows 7 SP1, 8.1 and 10, on both x86 and x64 architectures and for the first time on Arm64.</li>
+<li>Windows Server and Windows Server Core 2012 R2 and higher, on both x86 and x64, and Nano Server 1809 and higher on x64.</li>
+<li>Linux: all the major distributions including Alpine, CentOS, Debian, RedHat, Suse, Ubuntu and more, on the x64 architecture but in some cases supporting also Arm32 and Arm64.</li>
+<li>MacOS, from the version 10.13 onwards, on the x64 architecture</li>
+</ul>
+
+
+
+
+<figure>
+
+<img src="dotnet5_platform.jpg" />
+
+
+</figure>
+
+<h2 id="mono-for-xamarin">Mono For Xamarin</h2>
+
+<p>Mono is a clone of .NET framework runtime. Mono is created in 2001., but part for Xamarin is released in 2011. and its open source: <a href="https://github.com/mono/mono" target="_blank">https://github.com/mono/mono</a> and <a href="www.mono-project.com" target="_blank">www.mono-project.com</a>. Microsoft acquired Xamarin in 2016., making it a fully open-source branch of the .NET platform. It consists of Mono runtime and Xamarin Class Library and can run application workloads like IOS, OS X and Android.</p>
+
+<p>Mono is similar to .NET Core and includes Garbage collection, JIT, AOT and full support for C# (not VB.NET and F#). The Mono AOT compiler enables .NET code to be built into a single native code executable that can run on a machine, much like C++ code. Mono for Xamarin has a class library that support creating applications (for IO, collections, etc). But its a subset of .NET framework, there are not all components supported.</p>
+
+<p>It can run following workloads: Apple IOS applications, MAC OS X applications (desktop), Android applications, etc. and allows you to share code between these platforms and they run as native applications on devices that run on Mono. Each application is bundled with the Mono runtime and a class library. There is no need to install Mono on a device.</p>
+
+<p>Over time it branched out into wider areas, such as game development, where <a href="https://unity.com/" target="_blank">Unity</a> and Mono for Xamarin have long worked together to provide C# support in Unity.</p>
+
+
+
+
+<figure>
+
+<img src="xamarin.jpg" />
+
+
+</figure>
+
+<h2 id="other-frameworks-net-compact-framework-net-micro-framework">Other frameworks: .NET Compact Framework &amp; .NET Micro Framework</h2>
+
+<p>These are specific frameworks with a specific purpose. Both runtime were attempts to provide cut-down runtimes that would run on more constrained devices, such as PDAs, mobile phones factory controllers, etc. For example, <a href="https://netmf.github.io/" target="_blank">.NET Micro Framework</a> was build for resource-constrained devices with at least 256KB of flash and 64KB of RAM memory.</p>
+
+<h2 id="silverlight">Silverlight</h2>
+
+<p><a href="https://www.microsoft.com/silverlight/" target="_blank">Silverlight</a> was a popular cross-platform, .NET technology that enabled building rich media experiences for browsers. It was released on 2007 and had multiple capatibilites such as playing videos, download medias, creating rich UI and animations, etc. In 2015. Microsoft decided to stop supporting Silverlight in October 2021.</p>
+
+<h2 id="community-projects">Community Projects</h2>
+
+<p>Besides Microsoft official runtimes, there are .NET runtimes made by community, such as <a href="http://www.gnu.org/software/dotgnu/pnet.html" target="_blank">DotGNU Portable.NET</a>, <a href="https://mattwarren.org/2017/10/19/DotNetAnywhere-an-Alternative-.NET-Runtime/" target="_blank">DotNetAnywhere</a>, <a href="https://www.gocosmos.org/" target="_blank">CosmosOS</a> and <a href="https://web.archive.org/web/20090425073609/http://crossnet.codeplex.com/" target="_blank">CrossNet</a>. All of them have a slighty different approach to build such a framework.</p>
+
+<h1 id="net-standard">.NET Standard</h1>
+
+<p>As different runtimes uses different class libraries, e.g., .NET Framework uses .NET Framework class library, while .NET Core contains its own class library, as well as Xamarin with its own class library. In this way its hard to share code between different runtimes, as they don&rsquo;t use the same APIs. Microsoft solution to this is <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard" target="_blank">.NET Standard library</a>, released in 2016. It represent set of (formal) specifications that say which APIs you can use and its implemented by all runtimes. It is evolution of Portable Class Libraries (PCL). Specific runtimes implement specific version of .NET Standard (implementing specific set of APIs). E.g., .NET Framework 4.6.1 implements .NET Standard 2.0 and .NET 5 implements .NET Standard 2.1 (<a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support" target="_blank">link</a>).</p>
+
+
+
+
+<figure>
+
+<img src="netstandard.jpeg" />
+
+
+</figure>
+
+<p>The differences between .NET Standard and Portable Class Libraries (which is library that can be used on different platforms).</p>
+
+<ul>
+<li>.NET Standard represent set of API defined by Microsoft, while PCL is using API dependent on platform which is chosen.</li>
+<li>.NET Standard is platform agnostic, while PCL can target limited set of platforms.</li>
+</ul>
+
+<p>Each version of .NET Standard has set of APIs (e.g. System.Drawing) and it include all APIs of previous version, so its backward compatible. Specific .NET runtime versions implement specific .NET Standard versions. Lower versions of .NET Standard cover more platforms, which means that you should always target the lowest version possible.</p>
+
+<p>In .NET 5 .NET Core and .NET Standard are merged, which means that we now have a shared code base for all .NET workloads, whether it&rsquo;s desktop apps, cloud services, or mobile apps. However, <a href="https://docs.microsoft.com/en-us/dotnet/core/dotnet-five#net-50-doesnt-replace-net-standard" target="_blank">.NET 5 does not replace .NET Standard</a>. .NET 5 may run on phones and Windows desktop apps. New TFM net5.0 will represent the API set that available on all platforms. In addition, OS-specific TFMs are added (such as net5.0-windows) that targets all of the .net5.0 + APIs specific to Windows.</p>
+
+
+
+
+<figure>
+
+<img src="NET-implementation-support.png" />
+
+
+</figure>
+
+<p>In general, we can use:</p>
+
+<ul>
+<li><strong>netstandard2.0</strong> to share code between .NET Framework and all other platforms.</li>
+<li><strong>netstandard2.1</strong> to share code between Mono, Xamarin, and .NET Core 3.x.</li>
+<li><strong>net5.0</strong> for code sharing moving forward.</li>
+</ul>
+
+<h1 id="tools">Tools</h1>
+
+<h2 id="net-framework-tooling">.NET Framework tooling</h2>
+
+<p>The purpose of the tooling is to make applications. For the .NET Framework tooling, use MSBuild, who is invoked when code is build in Visual Studio or it can be called from a command line. MSBuild knows how to build or who should compile them. If the code is C#/VB.NET he will call .NET Compiler Platform (<a href="https://github.com/dotnet/roslyn/wiki/Roslyn%20Overview" target="_blank">Roslyn</a>). The result of compilation is binary file (.EXE or .DLL) with intermediate language (IL). It can be interpreted by CLR. CLR contains JIT-compiler, which compiles to native code, which OS understands. CLR has tools like Garbage Collector to clean memory when not needed.</p>
+
+<h2 id="net-core-and-net-5-tooling">.NET Core  and .NET 5 tooling</h2>
+
+<p>MSBuild is also used in .NET Core tooling, as well as .NET Compiler Platform (<a href="https://github.com/dotnet/roslyn/wiki/Roslyn%20Overview" target="_blank">Roslyn</a>). It procudes binaries (.EXE, .DLL) with intermediate language (IL), which is used by the Core Common Language Runtime (CoreCLR). CoreCLR is different from .NET Framwork CLR, as it can run on multiple frameworks. It has JIT-Compiler that can compile IL into native code for Windows, MacOS and Linux.</p>
+
+<p>There is another path to compile apps, when UWP is compiled, its compiled with AOT-Compiled (.NET Native), which produced Native code from IL and produced code as deployable package instead of compiling at runtime, which has performance benefit.</p>
+
+<p>CoreCLR and Native Code is loaded by app host process (dotnet.exe).</p>
+
+<p>.NET Core includes new Command Line Interface, called <strong>dotnet cli</strong>. It allows you to create new projects <code>dotnet new</code>, build applications <code>dotnet build</code>, run applications <code>dotnet run</code> or deploy them <code>dotnet publish</code>. You can try with <code>dotnet --info</code> and check which SDKs and runtimes you have installed and on which disk location are they installed.</p>
+
+<h2 id="mono-for-xamarin-tooling">Mono for Xamarin tooling</h2>
+
+<p>MSBuild is used again to run build process but only for files in C#. If there are C# code for Android, its compiled via Xamarin Compiler and compiled for Android platform (IL). Then Mono Runtime, which as JIT-Compiler, takes IL and produces Native code specific for that Android device on demand at runtime. It has also runtime services such as Garbage Collector.</p>
+
+<p>If we have C# code for IOS, its compiled via Xamarin Compiler, who pre-compile and produce package native for IOS (uses ARM Assembly language).</p>
+
+<p>As a side note on Xamarin, it also has different competitors, such as <a href="https://platform.uno/" target="_blank">Uno Platform</a> and <a href="https://avaloniaui.net/" target="_blank">Avalonia UI</a>. There is also a new kid in the block from Microsoft, called <a href="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor" target="_blank">Blazor</a>. All of these tools mainly uses WebAssembly (WASM) in combination with C# and XAML or JavaScript to allow developers to deploy apps in the browser, but also on different devices.</p>
+
+<h2 id="visual-studio-ide">Visual Studio IDE</h2>
+
+<p><a href="https://visualstudio.microsoft.com/" target="_blank">Visual Studio</a> is a Microsoft IDE used for building, debugging, and publishing applications across all platforms, including Android and iOS. Visual Studio is integrated with .NET and provides the features of language-specific environment.</p>
+
+<p>Visual Studio can be run on Windows and Mac. There is a free community version to be used. <a href="https://visualstudio.microsoft.com/vs/mac/" target="_blank">Visual Studio for Mac</a> is totally different environment than one for Windows, as it is based on <a href="https://www.monodevelop.com/" target="_blank">MonoDevelop</a>, IDE for Linux, macOS and Windows, built by Xamarin company (earlier called Xamarin Studio).</p>
+
+
+
+
+<figure>
+
+<img src="vstudio.png" />
+
+
+</figure>
+
+<p>Additionaly, it is possible to use <a href="https://code.visualstudio.com/docs/languages/dotnet" target="_blank">Visual Studio Code</a> to develop applications on .NET Core platform.</p>
+
+<p>Outside Microsoft world <a href="https://www.jetbrains.com/rider/" target="_blank">JetBrains Rider</a> is making an impact. By using it, one can develop .NET, ASP.NET, .NET Core, Xamarin or Unity applications on Windows, Mac, Linux.</p>
+
+<h1 id="libraries">Libraries</h1>
+
+<p>There are different kinds of libraries that can be used in the .NET ecosystem, most of which can be found as NuGet packages. <a href="https://nuget.org/" target="_blank">NuGet</a> is a package manager build for .NET that contains more than 90,000 packages.</p>
+
+<h1 id="languages">Languages</h1>
+
+<p>Different kinds of .NET applications can be written in C#, F# or Visual Basic.</p>
+
+<p>C# is a simple, modern, object-oriented programming language, whose roots are in the C family of languages. The current version is 9.0 and is supported on .NET 5 and .NET Standard 2.1. More on C# in general <a href="https://docs.microsoft.com/dotnet/csharp" target="_blank">here</a> and on C# 9.0 features <a href="http://milan.milanovic.org/talk/demystifying-the-most-significant-c-lang-features-from-8-to-9/Demystifying%20the%20most%20significant%20C%20lang%20features%20from%208%20to%209.pdf" target="_blank">here</a>.</p>
+
+<p>F# is a cross-platform, open-source, functional programming language for .NET. More about F# <a href="https://dotnet.microsoft.com/languages/fsharp" target="_blank">here</a>.</p>
+
+<p>Visual Basic is traditional programming language from Microsoft kitchen with simple syntax for building type-safe, object-oriented applications. More on Visual Basic <a href="https://docs.microsoft.com/dotnet/visual-basic" target="_blank">here</a>.</p>
+
+
+
+
+<figure>
+
+<img src="CSharp.png" />
+
+
+</figure>
+
+<h1 id="usage">Usage</h1>
+
+<p>The question is when to use each of the runtimes. This is a suggestion:</p>
+
+<ul>
+<li><strong>.NET Framework</strong> should be used to:
+
+<ul>
+<li>build Forms applications.</li>
+<li>that cannot run cross-platform (Windows).</li>
+</ul></li>
+<li><strong>.NET Core</strong> should be used if:
+
+<ul>
+<li>build high performance applications with small footprint.</li>
+<li>that run cross-platform.</li>
+</ul></li>
+<li><strong>.NET 5</strong> should be used if:
+
+<ul>
+<li>for all new development.</li>
+<li>that run cross-platform.</li>
+</ul></li>
+<li><strong>Mono for Xamarin</strong> should be used:
+
+<ul>
+<li>build mobile applications that utilize native features and cross-platform.</li>
+</ul></li>
+</ul>
+
+<p>If you use .NET Core or .NET 5 you can use framework-dependent applications or self-contained applications. Use Framework-dependent if no target os is needed, you need small deployment (installed on machine). But for self-contained app there is control over version and .NET Core and .NET 5 doesn&rsquo;t need to be installed, but the deployment is larger and need to select target OS.</p>
+
+<p>If we choose between ASP.NET or ASP.NET Core, ASP.NET is much older technology that runs only on Windows, but it has large set of capabilities and features. ASP.NET Core can be run cross-platform and its designed for high-performance and can run self-contained. It has less capabilities and 3rd party libraries than ASP.NET. No ASP.NET Forms.</p>
+
+<p>Regarding the usage of sharing code, we need to check first do we need it. If yes, we should use .NET Standard library. If no, than we share code between applications in the same runtime, then we can use library with that specific runtime. This enabled runtime specific features not available in .NET Standard.</p>
+
+<h1 id="look-to-the-future">Look to the future</h1>
+
+<p>As .NET 5 didn&rsquo;t bring all planned features, due to some technical problems but as well as delays caused by COVID-19 pandemic, some of the original plans for .NET 5 shifted to .NET 6 coming in November 2021., which will be a Long-Term Support (LTS) release. We can see .NET 5 as a first step in the .NET journey. The most significant goals for .NET 6 are already set. Many of them target improvements that didn’t make it into .NET 5, like a next-generation Xamarin that lowers the barriers between desktop and native mobile development, and better integration between the many different Windows UI toolkits. .NET 5 is a key technology for the separation of the Windows APIs from the OS, the Project Reunion merger of WinRT and Win32 APIs, and the move to both WinUI 3 and MAUI as UI layers. The Windows team continues to work on <a href="https://github.com/microsoft/ProjectReunion" target="_blank">Project Reunion</a> as the next step forward for UWP and related technologies.</p>
+
+
+
+
+<figure>
+
+<img src="dotnet_schedule.png" />
+
+
+</figure>
+
+<p>In 2020. Microsoft <a href="https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/" target="_blank">announced</a> that there will be a new first-class UI framework for creating cross-platform applications, called .NET MAUI. It will be an evolution of Xamarin.Forms and will simplify developer workflow and a project structure into a single project to target multiple platforms. General availability of the .NE MAUI will be with .NET 6 in November of 2021.</p>
+
+<p>In the new website that Microsoft created, we can see a vision for .NET. It called <a href="https://themesof.net/" target="_blank">Themes of .NET</a>. First made public late last year, themesof.net collects GitHub issues and aggregates them into themes and epics (terminology that stems from Agile project management). In this site we can see that Microsoft will prioritize following topics:</p>
+
+<ul>
+<li><strong>Making .NET accessible for beginners and education.</strong> Idea is to <a href="https://github.com/dotnet/core/issues/5465" target="_blank">lower the entry barriers</a> to .NET — in the form of building an open-source computer-science curriculum that could run entirely online in .NET notebooks.</li>
+<li><strong>Blazor on the desktop.</strong> This would be an interesting direction and probably a competitor for Electron. Giving Blazor a broader reach is an <a href="https://github.com/dotnet/aspnetcore/issues/27217" target="_blank">official goal</a> and looks like a good step.</li>
+<li><strong>Improve the .NET ecosystem.</strong> The idea is that as many developers avoid third-party tools when they build their .NET development stack, so if .NET is going to continue to grow, it needs to <a href="https://github.com/dotnet/core/issues/5415" target="_blank">help other developers succeed</a> — particularly those with open-source projects that the entire community can use.</li>
+<li><strong>Better development performance.</strong> This includes long-awaited enhancements like hot-reloading across ASP.NET and ahead-of-time compilation for Blazor. It’s an area where Microsoft says competing platforms are still <a href="https://github.com/dotnet/core/issues/5510" target="_blank">edging out .NET</a>.</li>
+<li><strong>Democratize ML.NET.</strong> The gap between toy examples in <a href="https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet" target="_blank">ML.NET framework</a> (introduced in 2018.) and practical integration is huge, and many a developer is carried off that cliff in a moment of enthusiasm. Microsoft developers have proposed a host of <a href="https://github.com/dotnet/machinelearning-modelbuilder/issues/1053" target="_blank">small improvements</a> that may help non-experts integrate machine learning features into their applications.</li>
+</ul>
+
+<p>So, looking at the latest trends, including <a href="https://azure.microsoft.com/en-us/" target="_blank">Azure</a> as one of the main Cloud platforms, future for the Microsoft-developer world is looking great. With open source and cross-platform as key priorities seems like a right direction in the years to follow.</p>
+
+<h1 id="useful-links">Useful links</h1>
+
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard" target="_blank">.NET Guide</a> – the general documentation by Microsoft for newbies.</p>
+
+<p><a href="https://docs.microsoft.com/en-us/answers/products/dotnet" target="_blank">.NET on Q&amp;A</a> – answers to technical questions about .NET.</p>
+
+<p><a href="https://docs.microsoft.com/en-us/dotnet/framework/" target="_blank">.NET Framework</a> – the original .NET documentation.</p>
+
+<p><a href="https://docs.microsoft.com/en-us/xamarin/" target="_blank">Xamarin</a> – documentation for mobile development.</p>
+
+<p><a href="https://dotnetfoundation.org/" target="_blank">.NET Foundation</a> – .NET open-source community.</p>
+
+<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">C# Guide</a> - official C# documentation.</p>
+
+<p><a href="https://www.nuget.org/" target="_blank">NuGet</a> – the place to find all .NET packages.</p>
+
+<p><a href="https://dotnet.microsoft.com/download" target="_blank">.NET Core and Framework</a> – download it here.</p>
+
+<p><a href="https://themesof.net/" target="_blank">Themes of .NET</a> - vision for the .NET.</p>
+
+<p><a href="https://dotnet.microsoft.com/platform/community" target="_blank">.NET Developer Community</a> – developer community and support with links to social media, forums, blogs, live workshops, and organizations like .NET foundation.</p>
+
+<p>Thanks for reading !</p>
+
+    </div>
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu6b2bc098fba5feccb4c6beb4e8cc5482_90406_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="https://milan.milanovic.org/">Dr. Milan Milanović</a></h5>
+      <h6 class="card-subtitle">Principal Consultant | Software Architect | Team Leader</h6>
+      <p class="card-text" itemprop="description">Empowering people and organizations to achieve more with digital transformation and cloud technology.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/#contact" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/milan_milanovic" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/milanm" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/milanmilanovic/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.flickr.com/photos/mmilanovic" target="_blank" rel="noopener">
+              <i class="fab fa-flickr"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2022. Milan Milanović &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.a634eb963f72ae9bd331e70f2b1bc2d8.js"></script>
+
+  </body>
+</html>
+
